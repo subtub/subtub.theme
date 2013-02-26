@@ -8,8 +8,8 @@ css themes from subtub
 
 Clone and build this Project with Git by running:  
 ```
-git clone git@github.com:subtub/subtub.theme.git
-cd subtub.theme
+git clone git@github.com:subtub/subtub.theme.git subtub_theme
+cd subtub_theme
 make build
 ```
 
