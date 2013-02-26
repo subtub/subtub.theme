@@ -20,27 +20,28 @@ RELEASE_DIR = css
 build:
 	@echo "Building  ${THEME_NAME}$  v.${THEME_VERSION}$...."
 	mkdir -p ${BUILD_DIR}$
-	lessc ${SRC_DIR}/subtub.less > ${BUILD_DIR}/subtub.css
+	./node_modules/.bin/recess --compile ${SRC_DIR}/subtub.less > ${BUILD_DIR}/subtub.css
+ 	
+
 
 # compile less to css and compress it
 build-min:
 	mkdir -p ${BUILD_DIR}$
-	lessc ${SRC_DIR}/subtub.less > ${BUILD_DIR}/subtub.min.css --yui-compress
+	./node_modules/.bin/recess --compile ${SRC_DIR}/subtub.less > ${BUILD_DIR}/subtub.min.css
 	
 
 release:
 	mkdir -p ${BUILD_DIR}$
-	lessc ${SRC_DIR}/subtub.less > css/subtub.css
-	lessc ${SRC_DIR}/subtub.less > css/subtub.min.css --yui-compress
+	@echo "TODO"
 
 
 clean:
 	rm -rf ${BUILD_DIR}$
-	@echo "TODO"
 
 
 install:
-	sudo gem install less
+	npm install
+
 
 help:
 	@echo ${THEME_NAME}$  v.${THEME_VERSION}$
