@@ -1,4 +1,5 @@
 # subtub.theme
+[![Build Status](https://travis-ci.org/subtub/subtub.theme.png?branch=master)](https://travis-ci.org/subtub/subtub.theme)
 
 css themes from subtub
 
