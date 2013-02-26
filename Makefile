@@ -8,9 +8,16 @@ SUBTUB_THEME_VERSION = 0.1.0
 BUILD_DIR = build
 
 
+# compile less to css
 build:
 	@echo "Building  ${SUBTUB_THEME}$  v.${SUBTUB_THEME_VERSION}$...."
-	lessc less/subtub.less > less/subtub.css
+	mkdir ${BUILD_DIR}$
+	lessc less/subtub.less > ${BUILD_DIR}/subtub.css
+
+# compile less to css and compress it
+build-min:
+	mkdir ${BUILD_DIR}$
+	lessc less/subtub.less > ${BUILD_DIR}/subtub.min.css --yui-compress
 	
 
 release:
