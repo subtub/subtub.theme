@@ -10,7 +10,7 @@ BUILD_DIR = build
 
 build:
 	@echo "Building  ${SUBTUB_THEME}$  v.${SUBTUB_THEME_VERSION}$...."
-	lessc less/subtub.less > ${BUILD_DIR}$/style.css
+	lessc less/subtub.less > less/subtub.css
 	
 
 release:

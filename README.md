@@ -4,7 +4,17 @@ css themes from subtub
 
 
 
-## Authors
+## Dev
+
+Clone and build this Project with Git by running:  
+```
+git clone git@github.com:subtub/subtub.theme.git
+cd subtub.theme
+make build
+```
 
 
-## Copsright, License
+
+## Copyright, License
+
+Copyright © 2013, subtub.cc
