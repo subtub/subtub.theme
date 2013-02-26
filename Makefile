@@ -26,5 +26,14 @@ clean:
 install:
 	sudo gem install less
 
+help:
+	@echo ${SUBTUB_THEME}$  v.${SUBTUB_THEME_VERSION}$
+	@echo ""
+	@echo "usage:"
+	@echo "     build              Build the "${SUBTUB_THEME}$
+	@echo "     release            Build less and copy to release dir."
+	@echo "     clean              Clean  dir"
+	@echo "     install            Install less stuff"
+	@echo "     help               Show this help"
 
-.PHONY: build release clean
+.PHONY: build release clean install help
