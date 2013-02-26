@@ -23,4 +23,8 @@ clean:
 	@echo "TODO"
 
 
+install:
+	sudo gem install less
+
+
 .PHONY: build release clean
