@@ -3,3 +3,4 @@
 
 # MAKE
 build/
+node_modules/
