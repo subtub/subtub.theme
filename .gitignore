@@ -1,0 +1,6 @@
+# GENERAL
+*.DS_Store
+
+# MAKE
+build/
+node_modules/
