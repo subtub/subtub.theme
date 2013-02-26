@@ -1,1 +1,5 @@
+# GENERAL
 *.DS_Store
+
+# MAKE
+build/
