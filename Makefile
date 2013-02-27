@@ -35,11 +35,13 @@ build-min:
 
 
 release:
+	@echo "${ANSI_COLOR}Building ${THEME_NAME} v.${THEME_VERSION}"
 	$(RECESS_BIN) --compile ${SRC_DIR}/${THEME_NAME}.less > ${RELEASE_DIR}/css/${THEME_NAME}.css
 	$(RECESS_BIN) --compress ${SRC_DIR}/${THEME_NAME}.less > ${RELEASE_DIR}/css/${THEME_NAME}.min.css
 	$(RECESS_BIN) --compile ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/css/${THEME_NAME}-responsive.css 
 	$(RECESS_BIN) --compress ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/css/${THEME_NAME}-responsive-min.css 
-
+	@echo "Building Ready!!!${ANSI_RESET}"
+	
 
 clean:
 	rm -rf ${BUILD_DIR}
