@@ -7,9 +7,9 @@ THEME_NAME = subtub
 THEME_VERSION = 0.1.0
 
 # Parameter
-RC_DIR = ./less
+SRC_DIR = ./less
 BUILD_DIR = ./build
-RELEASE_DIR = css
+RELEASE_DIR = assets
 BIN_PREFIX = ./node_modules/.bin
 RECESS_BIN = $(BIN_PREFIX)/recess
 
@@ -35,11 +35,10 @@ build-min:
 
 
 release:
-	mkdir -p ${RELEASE_DIR}$
-	$(RECESS_BIN) --compile ${SRC_DIR}/${THEME_NAME}.less > ${RELEASE_DIR}/${THEME_NAME}.css
-	$(RECESS_BIN) --compress ${SRC_DIR}/${THEME_NAME}.less > ${RELEASE_DIR}/${THEME_NAME}.min.css
-	$(RECESS_BIN) --compile ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/${THEME_NAME}-responsive.css 
-	$(RECESS_BIN) --compress ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/${THEME_NAME}-responsive-min.css 
+	$(RECESS_BIN) --compile ${SRC_DIR}/${THEME_NAME}.less > ${RELEASE_DIR}/css/${THEME_NAME}.css
+	$(RECESS_BIN) --compress ${SRC_DIR}/${THEME_NAME}.less > ${RELEASE_DIR}/css/${THEME_NAME}.min.css
+	$(RECESS_BIN) --compile ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/css/${THEME_NAME}-responsive.css 
+	$(RECESS_BIN) --compress ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/css/${THEME_NAME}-responsive-min.css 
 
 
 clean:
