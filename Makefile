@@ -57,4 +57,14 @@ help:
 	@echo "     install            Install less stuff"
 	@echo "     help               Show this help"
 
+
+test:
+	@echo "Begin Testing"
+	./node_modules/.bin/recess --compile ${SRC_DIR}/subtub.less > ${RELEASE_DIR}/subtub.css
+	./node_modules/.bin/recess --compress ${SRC_DIR}/subtub.less > ${RELEASE_DIR}/subtub.min.css
+	./node_modules/.bin/recess --compile ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/subtub-responsive.css 
+	./node_modules/.bin/recess --compress ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/subtub-responsive-min.css 
+	@echo "Testing Finished"
+
+
 .PHONY: build release clean install help
