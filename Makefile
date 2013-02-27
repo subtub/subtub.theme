@@ -22,16 +22,23 @@ ANSI_RESET=\033[0m
 build:
 	@echo "${ANSI_COLOR}Building ${THEME_NAME} v.${THEME_VERSION}"
 	mkdir -p ${BUILD_DIR}
-	$(RECESS_BIN) --compile ${SRC_DIR}/${THEME_NAME}.less > ${BUILD_DIR}/${THEME_NAME}.css
-	$(RECESS_BIN) --compile ${SRC_DIR}/responsive.less > ${BUILD_DIR}/${THEME_NAME}-responsive.css
+	mkdir -p ${BUILD_DIR}/css
+	$(RECESS_BIN) --compile ${SRC_DIR}/${THEME_NAME}.less > ${BUILD_DIR}/css/${THEME_NAME}.css
+	$(RECESS_BIN) --compile ${SRC_DIR}/responsive.less > ${BUILD_DIR}/css/${THEME_NAME}-responsive.css
+	mkdir -p ${BUILD_DIR}/img
+	cp assets/img/glyphicons-halflings-white.png ${BUILD_DIR}/img
+	cp assets/img/glyphicons-halflings.png ${BUILD_DIR}/img
 	@echo "Building Ready!!!${ANSI_RESET}"
 
 
 # compile less to css and compress it
 build-min:
 	mkdir -p ${BUILD_DIR}
-	$(RECESS_BIN) --compress ${SRC_DIR}/${THEME_NAME}.less > ${BUILD_DIR}/${THEME_NAME}.min.css
-	$(RECESS_BIN) --compress ${SRC_DIR}/responsive.less > ${BUILD_DIR}/${THEME_NAME}-responsive-min.css 
+	$(RECESS_BIN) --compress ${SRC_DIR}/${THEME_NAME}.less > ${BUILD_DIR}/css/${THEME_NAME}.min.css
+	$(RECESS_BIN) --compress ${SRC_DIR}/responsive.less > ${BUILD_DIR}/css/${THEME_NAME}-responsive-min.css 
+	mkdir -p ${BUILD_DIR}/img
+	cp assets/img/glyphicons-halflings-white.png ${BUILD_DIR}/img
+	cp assets/img/glyphicons-halflings.png ${BUILD_DIR}/img
 
 
 release:
@@ -41,7 +48,6 @@ release:
 	$(RECESS_BIN) --compile ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/css/${THEME_NAME}-responsive.css 
 	$(RECESS_BIN) --compress ${SRC_DIR}/responsive.less > ${RELEASE_DIR}/css/${THEME_NAME}-responsive-min.css 
 	@echo "Building Ready!!!${ANSI_RESET}"
-	
 
 clean:
 	rm -rf ${BUILD_DIR}
