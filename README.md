@@ -1,11 +1,10 @@
-# subtub.theme
-[![Build Status](https://travis-ci.org/subtub/subtub.theme.png?branch=master)](https://travis-ci.org/subtub/subtub.theme)
+# subtub.theme [![Build Status](https://travis-ci.org/subtub/subtub.theme.png?branch=master)](https://travis-ci.org/subtub/subtub.theme)
 
-css themes from subtub
-
+css themes from subtub, based on twitter bootstrap.
 
 
-## Dev
+
+## Quick start
 
 Clone and build this Project with Git by running:  
 ```
@@ -16,6 +15,20 @@ make build
 
 
 
-## Copyright, License
+## Copyright and License
 
-Copyright © 2013, subtub.cc
+Copyright 2013, [subtub](https://github.com/subtub/)
+
+Copyright 2012 Twitter, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this work except in compliance with the License.
+You may obtain a copy of the License in the LICENSE file, or at:
+
+  [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
