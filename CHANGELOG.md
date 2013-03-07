@@ -1,5 +1,9 @@
 # subtub.theme changelog
 
+**v0.1.1** 2012.03.07 15:04:38
+
+- update version at less/make files
+
 **v0.1.0** 2013.03.07 12:33:51
 
 - Added glyphicons

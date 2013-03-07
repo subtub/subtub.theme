@@ -4,7 +4,7 @@
 
 # The name and the version
 THEME_NAME = subtub
-THEME_VERSION = 0.1.0
+THEME_VERSION = 0.1.1
 
 # Parameter
 SRC_DIR = ./less
